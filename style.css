@@ -1,0 +1,303 @@
+/* font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif;
+Color: #1566C0*/
+
+/* Setup */
+
+:root{
+    --mainc: #1566c0;
+}
+
+h1, h2, h3, .h1, .h2, .h3{
+    font-family: 'Righteous', cursive;
+    color: #1566c0;
+}
+
+p, a {
+    font-family: 'Roboto', sans-serif;
+}
+/* End Setup */
+
+/* Header */
+.header{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url(./media/header.jpg), transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header h1{
+    font-size: 80px;
+}
+
+.title{
+    position: relative;
+    bottom: 40px;
+}
+
+.sub-title{
+    font-size: 21px;
+}
+
+.btn-header{
+    width: 160px;
+    height: 50px;
+    border-radius: 0px;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.btn-header:hover{
+    transform: scale(1.1);
+}
+
+.wave{
+    position: absolute;
+    bottom: -20px;
+    z-index: 1;
+}
+
+.wave2{
+    position: absolute;
+    bottom: -40px;
+    z-index: 2;
+}
+
+@media screen and (min-width: 768px){
+    .wave{
+        bottom: -60px;
+    }
+    
+    .wave2{
+        bottom: -80px;
+    }
+}
+@media screen and (min-width: 992px){
+    .wave{
+        bottom: -80px;
+    }
+    
+    .wave2{
+        bottom: -100px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .wave{
+        bottom: -100px;
+    }
+    
+    .wave2{
+        bottom: -120px;
+    }
+}
+/* End Header */
+
+/* Section 1: paragrafo */
+.parag{
+    position: relative;
+    z-index: 3;
+}
+
+.parag p{
+    font-weight: 500;
+    color: gray;
+}
+/* End Section 1 */
+
+/* Section 2: cards */
+.card{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 450px;
+    min-width: 225px;
+    max-width: 350px;
+    border-radius: 0px;
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 5px black;
+    transition: 0.4s;
+}
+
+.card1{
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.3), rgba(0,0,0,1)), url(./media/1.png);
+}
+.card2{
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.3), rgba(0,0,0,1)), url(./media/2.png);
+}
+.card3{
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.3), rgba(0,0,0,1)), url(./media/3.png);
+}
+.card4{
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.3), rgba(0,0,0,1)), url(./media/4.png);
+}
+
+.card-title{
+    border-bottom: 3px solid rgb(255,193,7);
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.card-body p{
+    font-size: 18px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 8px black;
+}
+/* End Section 2 */
+
+/* Section 3: card e icon buttons */
+.card-custom{
+    border: none;
+    border-radius: 20px;
+    box-shadow: 3px 6px 10px lightgray;
+    transition: 0.4s;
+}
+
+.card-custom h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.card-text-grey{
+    color: grey;
+    font-size: 22px;
+    font-weight: 500;
+}
+/* End Section 3 */
+
+/* Section 4: 8 cards diverse */
+.sm-card-text{
+    font-weight: 400;
+    font-size: 18px;
+}
+/* End Section 4 */
+
+/* Section 5: testo e immagini tonde */
+.img-circle{
+    border: 4px solid var(--mainc);
+    border-radius: 50%;
+    padding: 5px;
+}
+.circle-image-text{
+    color: grey;
+    font-weight: 500;
+    font-size: 21px;
+}
+/* End Section 5*/
+
+/* Section 6: Timeline */
+.timeline-circle-right{
+    position: relative;
+    border-right: none;
+    border-left: 4px solid var(--mainc);
+}
+
+.timeline-circle-right::after{
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border: 2px solid var(--mainc);
+    border-radius: 50%;
+    background-color: white;
+    top: 0px;
+    left: -17px;
+    transition: 0.4s;
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .timeline-circle-right{
+        border-left: none;
+    }
+    .timeline-circle-right::after{
+        display: none;
+    }
+}
+
+.timeline-circle-left{
+    position: relative;
+    border-left: 4px solid var(--mainc);
+
+}
+
+.timeline-circle-left::before{
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border: 2px solid var(--mainc);
+    border-radius: 50%;
+    background-color: white;
+    top: 0px;
+    left: -17px;
+    transition: 0.4s;
+}
+
+.timeline-circle-left:hover::before{
+    background: var(--mainc);
+    border: 2px solid white;
+}
+
+.timeline-circle-right:hover::after{
+    background: var(--mainc);
+    border: 2px solid white;
+}
+
+.timeline-circle-right:hover ~ .timeline-circle-left::before{
+    background: var(--mainc);
+    border: 2px solid white;
+}
+
+.timeline-circle-left:hover ~ .timeline-circle-right::after{
+    background: var(--mainc);
+    border: 2px solid white;
+}
+
+.btn-timeline{
+    width: 200px;
+    height: 50px;
+    border-radius: 0px;
+    font-size: 20px;
+    background: var(--mainc);
+    transition: 0.4s;
+}
+
+.btn-timeline > p{
+    color: white;
+}
+
+.btn-timeline:hover{
+    transform: scale(1.1);
+    background: white;
+    border: 2px solid var(--mainc);
+}
+
+.btn-timeline:hover p{
+    color: var(--mainc);
+}
+
+
+/* End Section 6 */
+
+/* Footer */
+.footer{
+    background:linear-gradient(rgba(255,255,255,1) 1%, transparent, rgba(0,0,0,0.8)65%), url(./media/footer.jpg);
+    position: bottom;
+    size: cover;
+    height: 60vh;
+    padding-bottom: 20px;
+}
+/* End footer */
+
+
+/* Animazione card custom */
+.card-custom:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 9px 10px lightgray;
+}
